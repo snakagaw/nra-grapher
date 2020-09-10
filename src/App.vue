@@ -7,11 +7,17 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+const fs = require('fs')
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  created() {
+    fs.readFile("/Users/nakagawasohei/Desktop/test", (error, data) => {
+      console.log(data.toString())
+    })
   }
 }
 </script>
